@@ -1,0 +1,14 @@
+{application, data_list_erl,
+ [
+  {description, "An Erlang data-list-erl library"},
+  {vsn, "1"},
+  {modules, [
+             data_list
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
