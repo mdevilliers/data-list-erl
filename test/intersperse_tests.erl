@@ -4,11 +4,8 @@
 
 
 intersperse_basic_test() ->
-	"a,b,c,d,e" = data_list_erl:intersperse(",", "abcde"),
-	"a,!,b,!,c,!,d,!,e" = data_list_erl:intersperse(",!,", "abcde").
+	[1,99,2,99,3,99,4,99,5] = data_list_erl:intersperse(99, [1,2,3,4,5]),
+	"aAbAcAdAe" = data_list_erl:intersperse("A", "abcde").
 
 intersperse_empty_test() ->
 	[] = data_list_erl:intersperse(",", "").
-
-intersperse_empty_seperator_test() ->
-	"abcde" = data_list_erl:intersperse("", "abcde").
